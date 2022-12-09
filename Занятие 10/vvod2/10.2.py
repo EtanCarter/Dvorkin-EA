@@ -1,8 +1,7 @@
 #-*- coding: utf-8 -*-
-file = open(r"C:\Users\EthanCarter\Desktop\Dvorkin.E.A_Y-224_vvod2.txt",encoding='utf-8')
 file1 = open(r"C:\Users\EthanCarter\Desktop\Dvorkin.E.A_Y-224_vvod2.txt",encoding='utf-8')
 file2 = open(r"C:\Users\EthanCarter\Desktop\Dvorkin.E.A_Y-224_vivod2.txt", 'w+',encoding='utf-8')
-T = file.readlines()
+T = file1.readlines()
 O = file1.readlines(7)
 N = file1.readlines(5)
 P = file1.readlines(5)
