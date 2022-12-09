@@ -11,11 +11,11 @@ def F(c,d):
     file2.write('number:')
     for i in b:
         if i == c:
-            vv.write('0')
+            file2.write('0')
             break
     for i in z:
         if i == c:
-            vv.write('1')
+            file2.write('1')
             break
     file2.write('\n')
     for i in a:
