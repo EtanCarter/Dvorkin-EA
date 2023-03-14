@@ -1,0 +1,59 @@
+import java.util.Objects;
+import java.util.Random;
+import java.util.Scanner;
+public class Main{
+    public static void main(String[] args) {
+        int [][] nev = Main.createMatrix(5);
+        Main.printMatrix(nev);
+	Main.operatingMatrix(nev);
+        Main.condition(nev);
+    }
+    public static int[][] createMatrix(int x){
+        int[][] cube = new int[x][x];
+        for (var i = 0; i<cube.length; i++){
+            for (var j = 0; j<cube.length; j++){
+                Random rand = new Random();
+                cube[i][j] = rand.nextInt(20);
+            }
+        }
+        return cube;
+    }
+    public static void printMatrix(int[][] c){
+        for (var i = 0; i<c.length; i++){
+            for (var j = 0; j<c.length; j++) {
+                System.out.print(c[i][j]+" ");
+            }
+            System.out.println("");
+        }
+    }
+    public static void condition{
+        Scanner in = new Scanner(System.in);
+        System.out.print("введите действие: ");
+        String data = in.nextLine();
+    }
+    public static void operate(int[][] v) {
+        int calculate = 0;
+	int operation = 1;
+	for (var i = 0; i < v.length; i++) {
+            for (var j = 0; j < v.length; j++) {
+                if (v[i][j] == 0){
+                    System.out.println("Error");
+                    System.exit(0);
+                }
+                else if(Objects.equals(data, "+")){
+                    calculate += v[i][j];
+                }
+                else if(Objects.equals(data, "*")){
+                    operation *= v[i][j];
+                }
+                else if(Objects.equals(data, "-")){
+                    calculate -= v[i][j];
+                }
+            }
+        }
+    }
+    public static void results{
+        System.out.println(""+operation);
+        System.out.println(""+calculate);
+    }
+}
